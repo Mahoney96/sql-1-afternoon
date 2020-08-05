@@ -68,4 +68,63 @@ SELECT SUM(product_price * quantity) FROM orders;
 SELECT SUM(product_price * quantity) FROM orders WHERE person_id = 0; 
 
 
+--PART III
 
+--#1
+INSERT INTO artist ( name ) VALUES ( 'artist name');
+
+--#2
+SELECT * FROM artist ORDER BY naame DESC LIMIT 10;
+
+--#3
+SELECT * FROM artist ORDER BY name ASC LIMIT 5;
+
+--#4
+SELECT * FROM artist WHERE name LIKE 'BLACK%';
+
+--#5
+SELECT * FROM artist WHERE name LIKE '%Black%';
+
+
+--PART IV
+
+--#1
+SELECT first_name, last_name, FROM employee WHERE city = 'Calgary';
+
+--#2
+SELECT MAX(birth_date) from employee;
+
+--#3
+SELECT Min(birth_date) from employee;
+
+--#4
+SELECT * FROM employee WHERE reports_to =2;
+
+--#5
+SELECT COUNT(*) FROM employee WHERE city = 'Lethbridge';
+
+--PART V
+
+--#1
+SELECT COUNT(*) FROM invoice WHERE billing_country = 'USA';
+
+--#2
+SELECT MAX(total) FROM invoice;
+
+--#3
+SELECT MIN(total) FROM invoice;
+
+--#4
+SELECT * FROM invoice WHERE total > 5;
+
+--#5
+SELECT COUNT(*) FROM invoice WHERE total < 5; 
+
+--#6
+SELECT COUNT(*) FORM invoice WHERE billing_state in ('CA', 'TX', 'AZ');
+
+--#7
+SELECT AVG(total) FROM invoice;
+
+--#8
+SELECT SUM(total) FROM invoice;
